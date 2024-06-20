@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title id="title"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="theme-color" content="#3B5998" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+   <style>
+   body
+   {background-color:#000 ;
+   background-image:url('bg.jpg');
+  font-family: -apple-system, BlinkMacSystemFont, "segoe ui", Verdana, Roboto, "helvetica neue", Arial, sans-serif, "apple color emoji";
+  font-size: 14px; 
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url('./font/fontello.eot?78273339');
+  src: url('./font/fontello.eot?78273339#iefix') format('embedded-opentype'),
+       url('./font/fontello.woff?78273339') format('woff'),
+       url('./font/fontello.ttf?78273339') format('truetype'),
+       url('./font/fontello.svg?78273339#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+ 
+.icon
+{
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.main{
+  background: white;
+  color: white;
+  max-width: 350px;
+  height: 100%;
+  border-radius:10px;
+  border-style: solid;
+  border-color: white;
+  border-top: 10px  ;
+  border-bottom: 10px  ;
+  border-left: 5px  ;
+  border-right: 5px  ;
+  padding: 25px;
+  margin-top: 10%;
+  margin-left:auto;
+  margin-right:auto;
+  transition: 0.3s;
+  text-align:center;
+  min-height:auto;
+  animation: fadein 1s;
+  -moz-animation: fadein 1s; /* Firefox */
+  -webkit-animation: fadein 1s; /* Safari and Chrome */
+  -o-animation: fadein 1s; /* Opera */
+
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+v
+.main:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+.main:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.box{
+  margin-bottom:10px;
+  text-align:center;
+}
+
+
+.button-small {
+  padding: auto;
+  margin: 5px;
+  margin-bottom: 9px;
+  border: 2px none;
+  outline: none;
+  color: aqua;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 6px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  height: 45px;
+  width: 46%;
+}
+
+.button-small:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.button-small:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+.info{
+  background-color: grey;
+  background-image: linear-gradient(grey, grey, grey);
+  border-radius:5px;
+  padding:10px;
+ font-size:25px;
+  
+}
+.button-big {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: aqua;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 6px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  height: 40px;
+  width: 150%;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 2px;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.button-big:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+.button-big:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.button-big {
+  width: 100%;
+  height: 50px;
+  margin: 10px 0px 0px ;
+  margin-bottom: 20px;
+  align-items: center;
+  outline: none;
+  background-color: aqua;
+  color: aqua;
+  transition: transform 0.1s;
+}
+.button-big:active {
+  transform: scale(0.95);
+}
+.button-big:hover {
+    background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+}
+
+.blink { font-size: 30px; animation: blinker 0.9s linear infinite; } @keyframes blinker { 50% { opacity: 0; } }
+
+
+@keyframes fadein {
+  from {opacity:0;}
+  to {opacity: 1;}
+}
+@-moz-keyframes fadein { /* Firefox */
+  from {opacity:0;}
+  to {opacity: 1;}
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+  from {opacity:0;}
+  to {opacity: 1;}
+}
+@-o-keyframes fadein { /* Opera */
+  from {opacity:0;}
+  to {opacity: 1;}
+}
+
+/* @media */
+@media screen and (max-width: 600px) {
+  .main{
+	width:90%;
+    margin-top: 10%;
+}}
+
+/* @media */
+@media screen and (min-width: 600px) {
+  .main{
+	margin-top: 1%;
+}}
+   </style>
+<body>
+      <div id='main' class='main'>
+      <div class='info'>
+      <marquee behavior='scroll' direction='left' style='color: white;'>FREE VLESS WORKER CLOUDFLARE </marquee>
+      </div>
+      <br><button class="button-big" onclick=</i>🇮🇩 SERVER INDONESIA 🇮🇩</button>
+      <button class="button-small" onclick="window.location='https://xcl.aframdani.cloud/noir7r';"></i>VLESS ID V1</button>
+      <button class="button-small" onclick="window.location='https://biz-xcl.aframdani.cloud/noir7r';"></i>VLESS ID V2</button>
+      
+			 <button class='button-big'onclick='change()'>🇸🇬 SERVER SINGAPORE 🇸🇬</button><br>
+			<button class="button-small" onclick="window.location='https://sgdo1.aframdani.cloud/noir7r';"></i>DIGITALOCEAN 1</button>
+                <button class="button-small" onclick="window.location='https://sgdo2.aframdani.cloud/noir7r';"></i>DIGITALOCEAN 2</button>
+                <button class="button-small" onclick="window.location='https://v2ray.aframdani.cloud/noir7r';"></i>OVH SAS</button>
+                <button class="button-small" onclick="window.location='https://sg1.aframdani.cloud/noir7r';"></i>TCC</button>
+                <button class="button-small" onclick="window.location='https://sg2.aframdani.cloud/noir7r';"></i>ALIBABA</button>  
+                <button class="button-small" onclick="window.location='https://vsg.aframdani.cloud/noir7r';"></i>BYTEVIRT LLC</button>
+                <button class="button-small" onclick="window.location='https://sg3.aframdani.cloud/noir7r';"></i>ORACLE LLC</button>      
+                <button class="button-small" onclick="window.location='https://sg4.aframdani.cloud/noir7r';"></i>AMAZON INC</button>
+                <button class="button-big" onclick="window.location='Https://t.me/afrcloudd/251';">Note: LIST POINTING </i></button
+            </div>
+            </form>
+			<br>
+       <div class='box'><b><i><span class='blink'> <a href="https://t.me/noir7r" target="_blank" style="text-decoration: none;"><font color= "aqua"> Powered By : Noir7r </a>
+        </div>
+</body>
+</html>
